@@ -1,0 +1,34 @@
+body {
+    background-color:plum;
+    padding: 3rem;
+    font-family: sans-serif;
+}
+
+#app {
+    /* display: flex; */
+    background-color: azure;
+    margin: auto;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    min-height: 30rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#todo-input {
+    height: 2rem;
+    width: 50%;
+}
+
+#todo-submit {
+    height: 2.2rem;
+    font-family: verdana;
+    font-size: 1rem;
+}
+
+#todo-output {
+    text-align: left;
+    margin-left: 2rem;
+}
