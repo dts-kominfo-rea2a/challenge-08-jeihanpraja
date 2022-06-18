@@ -19,7 +19,7 @@
       <section class="input">
         <!-- TODO: Buatlah sebuah input bertipe text dengan id todo-input -->
         <label for="todo-input"></label>
-        <input type="text" id="todo-input">
+        <input type="text" id="todo-input" placeholder="input your task here">
 
         <!-- TODO: Buatlah sebuah button dengan id todo-submit -->
         <button id="todo-submit">Submit</button>
@@ -39,7 +39,7 @@
     <!-- ! Untuk tantangan ini, script jangan diubah ke external js yah ! -->
     <script>
       // TODO: Deklarasi variable sesuai dengan kebutuhan di sini
-      const app = document.getElementById('app');
+      let app = document.getElementById('app');
       let button = document.getElementById('todo-submit');
       let input = document.getElementById('todo-input');
       let output = document.getElementById('todo-output');   
@@ -49,11 +49,12 @@
       // Fungsi yang digunakan untuk menambahkan tulisan
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
       function fnClickHandler(toDoItem) {
-        const li = document.createElement('li');
+        let li = document.createElement('li');
         li.innerHTML =  input.value;
         li.id = 'todo-output';
-        app.append(li); 
+        output.appendChild(li); 
         input.value = null;
+        input.focus();
       }
       
       // TODO: register event onclick / addEventListener untuk button
@@ -62,7 +63,7 @@
       
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
-      const btnEnter = (event) => {
+      let btnEnter = (event) => {
         if(event.key === 'Enter') {
           button.click();
         }
